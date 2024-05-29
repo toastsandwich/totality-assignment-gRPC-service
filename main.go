@@ -10,16 +10,16 @@ import (
 func main() {
 	config.Load()
 
+	err := config.ReadConfig()
+	if err != nil {
+		log.Fatal(err.Error())
+	}
+
 	file, err := config.InitLogger()
 	if err != nil {
 		log.Fatal(err.Error())
 	}
 	defer file.Close()
-
-	err = config.ReadConfig()
-	if err != nil {
-		log.Fatal(err.Error())
-	}
 
 	err = server.Start(config.HOST, config.PORT)
 	if err != nil {

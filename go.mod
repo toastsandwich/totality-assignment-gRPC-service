@@ -1,3 +1,3 @@
-module github.com/toastsandwich/totality-assignment-gRPC-service
+module github.com/WistleBlowers/totality-assignment-RESTful-version
 
 go 1.22.2

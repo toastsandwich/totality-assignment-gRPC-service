@@ -1,20 +1,17 @@
 package main
 
 import (
-	"os"
+	"log"
 
 	"github.com/WistleBlowers/totality-assignment-RESTful-version/config"
 	"github.com/WistleBlowers/totality-assignment-RESTful-version/server"
 )
 
 func main() {
-	var host, port string
-	if len(os.Args) == 1 {
-		host = "localhost"
-		port = "9000"
-	} else {
-		host, port = os.Args[1], os.Args[2]
-	}
 	config.Load()
-	server.Start(host, port)
+	err := config.ReadConfig()
+	if err != nil {
+		log.Fatal(err.Error())
+	}
+	server.Start(config.HOST, config.PORT)
 }

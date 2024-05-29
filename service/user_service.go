@@ -1,18 +1,21 @@
 package service
 
 import (
-	"strconv"
-
 	"github.com/toastsandwich/totality-assignment-GRPC-version/config"
 	"github.com/toastsandwich/totality-assignment-GRPC-version/models"
 )
 
-func GetUserByID(id_str string) (*models.User, error) {
+// func GetUserByID(id_str string) (*models.User, error) {
+// 	userRepo := config.UsersRepo
+// 	id, err := strconv.Atoi(id_str)
+// 	if err != nil {
+// 		return nil, err
+// 	}
+// 	return userRepo.GetUserByID(id)
+// }
+
+func GetUserByID(id int) (*models.User, error) {
 	userRepo := config.UsersRepo
-	id, err := strconv.Atoi(id_str)
-	if err != nil {
-		return nil, err
-	}
 	return userRepo.GetUserByID(id)
 }
 

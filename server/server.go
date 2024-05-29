@@ -2,17 +2,35 @@ package server
 
 import (
 	"log"
-	"net/http"
+	"net"
 
-	handlers "github.com/toastsandwich/totality-assignment-GRPC-version/handler"
+	"github.com/toastsandwich/totality-assignment-GRPC-version/pb/github.com/toastsandwich/totality-assignment-GRPC-version/pb"
+	"github.com/toastsandwich/totality-assignment-GRPC-version/user_server"
+	"google.golang.org/grpc"
+	"google.golang.org/grpc/reflection"
 )
+
+// func Start(host, port string) error {
+// 	addr := host + ":" + port
+// 	server := http.Server{
+// 		Addr:    addr,
+// 		Handler: handlers.Routes(),
+// 	}
+// 	log.Println("server hosted at", server.Addr)
+// 	return server.ListenAndServe()
+// }
 
 func Start(host, port string) error {
 	addr := host + ":" + port
-	server := http.Server{
-		Addr:    addr,
-		Handler: handlers.Routes(),
+	server := grpc.NewServer()
+	userServer := user_server.NewUserServer()
+	reflection.Register(server)
+	pb.RegisterUserServiceServer(server, userServer)
+
+	ln, err := net.Listen("tcp", addr)
+	if err != nil {
+		return err
 	}
-	log.Println("server hosted at", server.Addr)
-	return server.ListenAndServe()
+	log.Println("grpc server hosted on ", addr)
+	return server.Serve(ln)
 }

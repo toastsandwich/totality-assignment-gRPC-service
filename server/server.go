@@ -10,16 +10,6 @@ import (
 	"google.golang.org/grpc/reflection"
 )
 
-// func Start(host, port string) error {
-// 	addr := host + ":" + port
-// 	server := http.Server{
-// 		Addr:    addr,
-// 		Handler: handlers.Routes(),
-// 	}
-// 	log.Println("server hosted at", server.Addr)
-// 	return server.ListenAndServe()
-// }
-
 func Start(host, port string) error {
 	addr := host + ":" + port
 	server := grpc.NewServer()

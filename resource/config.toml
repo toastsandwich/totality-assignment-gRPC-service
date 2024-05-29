@@ -1,6 +1,6 @@
 [server]
 host = "localhost"
-port = "7000"
+port = "5097"
 
 [log]
 path = "./app.log"

@@ -10,7 +10,6 @@ import (
 )
 
 func TestGetUserByID(t *testing.T) {
-	// Set up test data
 	config.UsersRepo = &repository.UserRepo{DB: []*models.User{
 		{ID: 1, FName: "John", LName: "Doe", City: "New York", Phone: 1234567890, Height: 5.9, Married: true},
 	}}
@@ -42,7 +41,6 @@ func TestGetUserByID(t *testing.T) {
 }
 
 func TestSearchByCriteria(t *testing.T) {
-	// Set up test data
 	config.UsersRepo = &repository.UserRepo{DB: []*models.User{
 		{ID: 1, FName: "John", LName: "Doe", City: "New York", Phone: 1234567890, Height: 5.9, Married: true},
 		{ID: 2, FName: "Jane", LName: "Smith", City: "Los Angeles", Phone: 2345678901, Height: 5.5, Married: false},
@@ -56,7 +54,7 @@ func TestSearchByCriteria(t *testing.T) {
 		wantError   bool
 	}{
 		{"Search by city", "City", "New York", []*models.User{{ID: 1, FName: "John", LName: "Doe", City: "New York", Phone: 1234567890, Height: 5.9, Married: true}}, false},
-		{"Search by non-existing city", "City", "Miami", []*models.User{}, false}, // Updated expectation
+		{"Search by non-existing city", "City", "Miami", []*models.User{}, false},
 	}
 
 	for _, tt := range tests {

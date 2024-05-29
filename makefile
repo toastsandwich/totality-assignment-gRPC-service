@@ -6,4 +6,7 @@ run:
 
 clean:
 	@go clean
-	@rm app
+	@del app
+
+gen:
+	@protoc --go_out=pb --go-grpc_out=pb proto/*.proto

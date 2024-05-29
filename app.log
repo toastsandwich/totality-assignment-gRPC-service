@@ -14,3 +14,4 @@
 2024/05/29 14:54:23 server.go:34: grpc server hosted on  localhost:8023
 2024/05/29 14:55:22 server.go:34: grpc server hosted on  localhost:5097
 2024/05/29 14:55:59 server.go:34: grpc server hosted on  localhost:5097
+2024/05/29 16:31:37 server.go:24: grpc server hosted on  localhost:5097

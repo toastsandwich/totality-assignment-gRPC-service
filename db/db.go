@@ -1,6 +1,6 @@
 package db
 
-import "github.com/WistleBlowers/totality-assignment-RESTful-version/models"
+import "github.com/toastsandwich/totality-assignment-GRPC-version/models"
 
 var UserData = []*models.User{
 	{

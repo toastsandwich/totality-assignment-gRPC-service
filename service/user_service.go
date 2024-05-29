@@ -3,8 +3,8 @@ package service
 import (
 	"strconv"
 
-	"github.com/WistleBlowers/totality-assignment-RESTful-version/config"
-	"github.com/WistleBlowers/totality-assignment-RESTful-version/models"
+	"github.com/toastsandwich/totality-assignment-GRPC-version/config"
+	"github.com/toastsandwich/totality-assignment-GRPC-version/models"
 )
 
 func GetUserByID(id_str string) (*models.User, error) {

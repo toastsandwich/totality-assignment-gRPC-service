@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/WistleBlowers/totality-assignment-RESTful-version/models"
+	"github.com/toastsandwich/totality-assignment-GRPC-version/models"
 )
 
 type UserRepo struct {

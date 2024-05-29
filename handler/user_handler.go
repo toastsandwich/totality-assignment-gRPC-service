@@ -3,8 +3,8 @@ package handlers
 import (
 	"net/http"
 
-	"github.com/WistleBlowers/totality-assignment-RESTful-version/service"
-	"github.com/WistleBlowers/totality-assignment-RESTful-version/utils"
+	"github.com/toastsandwich/totality-assignment-GRPC-version/service"
+	"github.com/toastsandwich/totality-assignment-GRPC-version/utils"
 )
 
 func GetUserByID(w http.ResponseWriter, r *http.Request) {

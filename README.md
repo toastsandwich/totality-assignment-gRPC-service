@@ -63,5 +63,5 @@ To start the gRPC server using Docker, follow these steps:
     ```
 
 5. **Test services using Postman**
-
+    grpc://localhost:<localport> -> service
 ---

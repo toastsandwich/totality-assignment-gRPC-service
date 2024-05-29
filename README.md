@@ -37,3 +37,28 @@ To start the gRPC server, run the following command:
 
 ```sh
 make run
+```
+
+## Docker
+To get docker image
+
+1. Pull the image:
+    ```docker
+    docker pull toastsandwich/totality-grpc-service:latest
+    ```
+
+2. Get docker image id
+    ```docker
+    docker images
+    ```
+
+3. Get docker container id
+    ```docker
+    docker ps
+    ```
+
+4. Run the docker image
+    ```docker
+    docker run -p<localport>:<7000> <docker image id>
+    ```
+5. you can now use postman to test services

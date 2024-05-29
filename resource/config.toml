@@ -1,3 +1,6 @@
 [server]
 host = "localhost"
 port = "7000"
+
+[log]
+path = "app.log"

@@ -37,7 +37,7 @@ func ReadConfig() error {
 }
 
 func InitLogger() (*os.File, error) {
-	file, err := os.OpenFile("./app.log", os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0644)
+	file, err := os.OpenFile(LOGPATH, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0644)
 	if err != nil {
 		return nil, err
 	}

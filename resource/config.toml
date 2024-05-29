@@ -3,4 +3,4 @@ host = "localhost"
 port = "7000"
 
 [log]
-path = "app.log"
+path = "./app.log"

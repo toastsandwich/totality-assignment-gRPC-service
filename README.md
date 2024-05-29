@@ -40,7 +40,7 @@ make run
 ```
 
 ## Docker
-To get docker image
+To start gRPC server on docker
 
 1. Pull the image:
     ```docker

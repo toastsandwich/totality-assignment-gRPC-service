@@ -1,7 +1,7 @@
 build:
 	@go build -o app main.go
 
-run:
+run: build
 	@go run main.go
 
 clean:

@@ -1,3 +1,16 @@
-2024/05/29 10:02:03 server.go:16: server hosted at localhost:7000
-2024/05/29 10:10:38 server.go:16: server hosted at localhost:7000
-2024/05/29 10:10:48 server.go:16: server hosted at localhost:7000
+2024/05/29 14:29:31 server.go:34: grpc server hosted on  localhost:8023
+2024/05/29 14:30:21 server.go:34: grpc server hosted on  localhost:8023
+2024/05/29 14:43:06 server.go:34: grpc server hosted on  localhost:8023
+2024/05/29 14:43:50 server.go:34: grpc server hosted on  localhost:8023
+2024/05/29 14:44:23 server.go:34: grpc server hosted on  localhost:8023
+2024/05/29 14:44:34 server.go:34: grpc server hosted on  localhost:8023
+2024/05/29 14:47:28 server.go:34: grpc server hosted on  localhost:8023
+2024/05/29 14:49:08 server.go:34: grpc server hosted on  localhost:8023
+2024/05/29 14:49:45 server.go:34: grpc server hosted on  localhost:8023
+2024/05/29 14:50:06 server.go:34: grpc server hosted on  localhost:8023
+2024/05/29 14:51:41 server.go:34: grpc server hosted on  localhost:8023
+2024/05/29 14:51:48 server.go:34: grpc server hosted on  localhost:8023
+2024/05/29 14:53:05 server.go:34: grpc server hosted on  localhost:8023
+2024/05/29 14:54:23 server.go:34: grpc server hosted on  localhost:8023
+2024/05/29 14:55:22 server.go:34: grpc server hosted on  localhost:5097
+2024/05/29 14:55:59 server.go:34: grpc server hosted on  localhost:5097

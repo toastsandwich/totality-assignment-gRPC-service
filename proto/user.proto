@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option go_package = "github.com/toastsandwich/totality-assignment-GRPC-version/pb";
+
+service UserService {
+    rpc GetUserByID (GetUserByIDReq) returns (GetUserByIDRes);
+    rpc SearchByCriteria (SearchByCriteriaReq) returns (SearchByCriteriaRes);
+}
+
+message User {
+    int32 id = 1;
+    string fname = 2;
+    string lname = 3;
+    string city = 4;
+    int32 phone = 5;
+    float height = 6;
+    bool married = 7;
+}
+
+message GetUserByIDReq {
+    int32 id = 1;
+}
+
+message GetUserByIDRes {
+    User user = 1;
+}
+
+message SearchByCriteriaReq {
+    string criteria = 1;
+    string value = 2;
+}
+
+message SearchByCriteriaRes {
+    repeated User users = 1;
+}
+

@@ -2,6 +2,7 @@ package user_server
 
 import (
 	"context"
+	"log"
 
 	"github.com/toastsandwich/totality-assignment-GRPC-version/pb/github.com/toastsandwich/totality-assignment-GRPC-version/pb"
 	"github.com/toastsandwich/totality-assignment-GRPC-version/service"
@@ -17,6 +18,7 @@ func NewUserServer() *UserServer {
 }
 
 func (s *UserServer) GetUserByID(ctx context.Context, req *pb.GetUserByIDReq) (*pb.GetUserByIDRes, error) {
+	log.Println("GetUserByID called")
 	id := req.Id
 	usr, err := service.GetUserByID(int(id))
 	if err != nil {
@@ -29,6 +31,7 @@ func (s *UserServer) GetUserByID(ctx context.Context, req *pb.GetUserByIDReq) (*
 }
 
 func (s *UserServer) SearchByCriteria(ctx context.Context, req *pb.SearchByCriteriaReq) (*pb.SearchByCriteriaRes, error) {
+	log.Println("SearchByCriteria called")
 	criteia := req.Criteria
 	value := req.Value
 	usrs, err := service.SearchByCriteria(criteia, value)

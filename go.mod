@@ -1,4 +1,4 @@
-module github.com/WistleBlowers/totality-assignment-RESTful-version
+module github.com/toastsandwich/totality-assignment-GRPC-version
 
 go 1.22.2
 
